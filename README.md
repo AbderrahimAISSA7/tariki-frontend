@@ -2,6 +2,18 @@
 
 Interface web moderne de l'application **Tariki**.
 
+## 🚀 Démarrage rapide
+
+```bash
+npm install
+npm run dev
+```
+
+L'application est disponible sur [http://localhost:5173](http://localhost:5173).
+
+Le serveur Vite proxifie les appels `/api/*` vers le backend Spring Boot sur `http://localhost:8080`.
+Si le backend n'est pas lancé, le tableau de bord utilise des données de démonstration alignées avec `data.sql`.
+
 ## 🎯 Objectif
 Permettre aux entreprises de :
 - gérer leurs livraisons
