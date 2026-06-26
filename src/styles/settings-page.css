@@ -1,0 +1,140 @@
+.settings-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.settings-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f3f4f6;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    flex: 1;
+}
+
+.section-header svg {
+    color: #2563eb;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.form-group.toggle label {
+    margin-bottom: 0;
+}
+
+.form-group.toggle input[type="checkbox"] {
+    width: 50px;
+    height: 28px;
+    appearance: none;
+    background: #d1d5db;
+    border-radius: 99px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+.form-group.toggle input[type="checkbox"]:checked {
+    background: #2563eb;
+}
+
+.form-group.toggle input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s ease;
+}
+
+.form-group.toggle input[type="checkbox"]:checked::before {
+    left: 24px;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.success-message {
+    color: #16a34a;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .settings-section {
+        padding: 1.5rem;
+    }
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-group.toggle {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

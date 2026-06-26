@@ -1,0 +1,382 @@
+.app-shell {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 0;
+    min-height: 100vh;
+    background: #f9fafb;
+}
+
+.sidebar {
+    background: white;
+    border-right: 1px solid #e5e7eb;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.brand {
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.nav-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 0.75rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    margin: 0;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #6b7280;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background: #f3f4f6;
+    color: #1a1a1a;
+}
+
+.nav-item.active {
+    background: #dbeafe;
+    color: #1e40af;
+    font-weight: 600;
+}
+
+.nav-item svg {
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+}
+
+.operator {
+    padding: 1rem 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin: 0 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+.operator>div:last-of-type {
+    flex: 1;
+}
+
+.operator strong {
+    display: block;
+    font-size: 0.875rem;
+    color: #1a1a1a;
+}
+
+.operator span {
+    display: block;
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+.icon-button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.icon-button:hover {
+    color: #1a1a1a;
+}
+
+
+/* Main Content */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    gap: 2rem;
+    flex-shrink: 0;
+}
+
+.topbar>div:first-child h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1a1a1a;
+}
+
+.topbar>div:first-child p {
+    margin: 0.25rem 0 0 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.notification-button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.notification-button:hover {
+    color: #1a1a1a;
+}
+
+.notification-button>span {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    background: #ef4444;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.user-chip-wrapper {
+    position: relative;
+}
+
+.user-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.user-chip:hover {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+}
+
+.profile-photo {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+}
+
+.user-chip strong {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.user-chip svg {
+    width: 19px;
+    height: 19px;
+    color: #6b7280;
+}
+
+.profile-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    color: #374151;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background: #f3f4f6;
+    color: #1a1a1a;
+}
+
+.menu-item.logout {
+    color: #dc2626;
+    border-top: 1px solid #f3f4f6;
+}
+
+.menu-item.logout:hover {
+    background: #fee2e2;
+}
+
+
+/* Buttons */
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.primary-button {
+    background: #2563eb;
+    color: white;
+}
+
+.primary-button:hover {
+    background: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.secondary-button {
+    background: #f3f4f6;
+    color: #1a1a1a;
+    border: 1px solid #d1d5db;
+}
+
+.secondary-button:hover {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .app-shell {
+        grid-template-columns: 240px 1fr;
+    }
+    .sidebar {
+        padding: 1rem 0;
+    }
+    .brand {
+        padding: 0 1rem;
+    }
+    .topbar {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-shell {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 280px;
+        height: 100vh;
+        z-index: 200;
+        display: none;
+    }
+    .sidebar.mobile-open {
+        display: flex;
+    }
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .top-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .user-chip {
+        flex: 1;
+    }
+}
